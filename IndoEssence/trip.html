@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip | IndoEssence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-bar">
+            <div class="home-button">
+                <a href="homeL.html" class="home-btn"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="Home" height="60px" width="auto"></a>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search destinations...">
+                <button class="search-btn" onclick="location.href='trip.html'">🔍</button>
+            </div>
+            <div class="nav-buttons">
+                <button class="register-btn" onclick="location.href='editprofile.html'">Edit Profile</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="section-header">
+                <h2 style="color: white;">Destination in Indonesia</h2>
+                <p style="color: white;">Jelajahi keindahan Nusantara dari Sabang sampai Merauke</p>
+            </div>
+            <div class="section-content">
+                <!-- Filter Section -->
+                <div class="filter-container">
+                    <div class="filter-group">
+                        <label for="region-filter">Wilayah:</label>
+                        <select id="region-filter" onchange="filterTrips()">
+                            <option value="all">Semua Wilayah</option>
+                            <option value="sumatera">Sumatera</option>
+                            <option value="jawa">Jawa</option>
+                            <option value="bali-nusa">Bali & Nusa Tenggara</option>
+                            <option value="kalimantan">Kalimantan</option>
+                            <option value="sulawesi">Sulawesi</option>
+                            <option value="maluku-papua">Maluku & Papua</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="category-filter">Kategori:</label>
+                        <select id="category-filter" onchange="filterTrips()">
+                            <option value="all">Semua Kategori</option>
+                            <option value="pantai">Pantai</option>
+                            <option value="gunung">Gunung</option>
+                            <option value="budaya">Budaya</option>
+                            <option value="kota">Kota</option>
+                            <option value="alam">Alam</option>
+                            <option value="pulau">Pulau</option>
+                        </select>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <label for="price-filter">Budget:</label>
+                        <select id="price-filter" onchange="filterTrips()">
+                            <option value="all">Semua Budget</option>
+                            <option value="budget">< Rp 1.500.000</option>
+                            <option value="medium">Rp 1.500.000 - 3.000.000</option>
+                            <option value="premium">> Rp 3.000.000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="trip-stats">
+                    <span id="trip-count">Menampilkan 24 destinasi</span>
+                </div>
+
+                <div class="trip-grid" id="trip-grid">
+                    <!-- Sumatera -->
+                    <div class="trip-card" data-region="sumatera" data-category="alam" data-price="2800000">
+                        <div class="trip-image">🌋</div>
+                        <div class="trip-info">
+                            <h3>Danau Toba & Pulau Samosir</h3>
+                            <p>Nikmati keindahan danau vulkanik terbesar di dunia dan budaya Batak yang khas di Pulau Samosir.</p>
+                            <div class="price">Rp 2.800.000</div>
+                            <div class="location">📍 Sumatera Utara</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="sumatera" data-category="pantai" data-price="3500000">
+                        <div class="trip-image">🏝</div>
+                        <div class="trip-info">
+                            <h3>Kepulauan Mentawai</h3>
+                            <p>Surga tersembunyi untuk para peselancar dengan ombak kelas dunia dan budaya lokal yang unik.</p>
+                            <div class="price">Rp 3.500.000</div>
+                            <div class="location">📍 Sumatera Barat</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="sumatera" data-category="alam" data-price="2200000">
+                        <div class="trip-image">🦧</div>
+                        <div class="trip-info">
+                            <h3>Bukit Lawang Orangutan Trek</h3>
+                            <p>Bertemu langsung dengan orangutan liar di habitat aslinya dalam petualangan jungle trekking.</p>
+                            <div class="price">Rp 2.200.000</div>
+                            <div class="location">📍 Sumatera Utara</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="sumatera" data-category="pantai" data-price="1800000">
+                        <div class="trip-image">🌅</div>
+                        <div class="trip-info">
+                            <h3>Pantai Lampuuk Aceh</h3>
+                            <p>Pantai dengan pasir putih dan sunset menakjubkan, cocok untuk surfing dan bersantai.</p>
+                            <div class="price">Rp 1.800.000</div>
+                            <div class="location">📍 Aceh</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Jawa -->
+                    <div class="trip-card" data-region="jawa" data-category="budaya" data-price="1800000">
+                        <div class="trip-image">🏛</div>
+                        <div class="trip-info">
+                            <h3>Yogyakarta Heritage</h3>
+                            <p>Eksplorasi budaya Jogja dengan mengunjungi Borobudur, Prambanan, dan Malioboro Street.</p>
+                            <div class="price">Rp 1.800.000</div>
+                            <div class="location">📍 Yogyakarta</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="jawa" data-category="gunung" data-price="1200000">
+                        <div class="trip-image">🌄</div>
+                        <div class="trip-info">
+                            <h3>Bromo Sunrise Adventure</h3>
+                            <p>Saksikan matahari terbit yang menakjubkan di Gunung Bromo. Termasuk jeep tour dan penginapan.</p>
+                            <div class="price">Rp 1.200.000</div>
+                            <div class="location">📍 Jawa Timur</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="jawa" data-category="kota" data-price="900000">
+                        <div class="trip-image">🏢</div>
+                        <div class="trip-info">
+                            <h3>Jakarta City Tour</h3>
+                            <p>Tur keliling ibu kota dengan mengunjungi Monas, Kota Tua, dan pusat perbelanjaan modern.</p>
+                            <div class="price">Rp 900.000</div>
+                            <div class="location">📍 Jakarta</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="jawa" data-category="kota" data-price="1500000">
+                        <div class="trip-image">🌸</div>
+                        <div class="trip-info">
+                            <h3>Bandung Cool City</h3>
+                            <p>Jelajahi kota kembang dengan destinasi wisata alam, kuliner, dan factory outlet terbaik.</p>
+                            <div class="price">Rp 1.500.000</div>
+                            <div class="location">📍 Jawa Barat</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="jawa" data-category="pantai" data-price="1100000">
+                        <div class="trip-image">🏖</div>
+                        <div class="trip-info">
+                            <h3>Pantai Parangtritis & Sekitarnya</h3>
+                            <p>Nikmati keindahan pantai selatan Jogja dengan legenda Nyi Roro Kidul dan sunset yang memukau.</p>
+                            <div class="price">Rp 1.100.000</div>
+                            <div class="location">📍 Yogyakarta</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Bali & Nusa Tenggara -->
+                    <div class="trip-card" data-region="bali-nusa" data-category="pantai" data-price="2500000">
+                        <div class="trip-image">🏝</div>
+                        <div class="trip-info">
+                            <h3>Bali Paradise Tour</h3>
+                            <p>Jelajahi keindahan pulau dewata dengan paket 4 hari 3 malam. Kunjungi pantai Kuta, Ubud, dan Tanah Lot.</p>
+                            <div class="price">Rp 2.500.000</div>
+                            <div class="location">📍 Bali</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="bali-nusa" data-category="pantai" data-price="3200000">
+                        <div class="trip-image">🐠</div>
+                        <div class="trip-info">
+                            <h3>Lombok Exotic Beach</h3>
+                            <p>Nikmati keindahan pantai eksotis Lombok, snorkeling di Gili Trawangan dan Pink Beach.</p>
+                            <div class="price">Rp 3.200.000</div>
+                            <div class="location">📍 Lombok</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="bali-nusa" data-category="pulau" data-price="4500000">
+                        <div class="trip-image">🦎</div>
+                        <div class="trip-info">
+                            <h3>Komodo Dragon Adventure</h3>
+                            <p>Bertemu langsung dengan komodo di habitat aslinya dan snorkeling di perairan Flores yang jernih.</p>
+                            <div class="price">Rp 4.500.000</div>
+                            <div class="location">📍 Flores, NTT</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="bali-nusa" data-category="budaya" data-price="2800000">
+                        <div class="trip-image">🏯</div>
+                        <div class="trip-info">
+                            <h3>Bali Culture & Temple Tour</h3>
+                            <p>Eksplorasi warisan budaya Bali dengan mengunjungi pura-pura sakral dan desa tradisional.</p>
+                            <div class="price">Rp 2.800.000</div>
+                            <div class="location">📍 Bali</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Kalimantan -->
+                    <div class="trip-card" data-region="kalimantan" data-category="alam" data-price="3800000">
+                        <div class="trip-image">🦧</div>
+                        <div class="trip-info">
+                            <h3>Tanjung Puting Orangutan</h3>
+                            <p>Jelajahi hutan Kalimantan dengan klotok dan bertemu orangutan di Tanjung Puting National Park.</p>
+                            <div class="price">Rp 3.800.000</div>
+                            <div class="location">📍 Kalimantan Tengah</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="kalimantan" data-category="budaya" data-price="2900000">
+                        <div class="trip-image">🏘</div>
+                        <div class="trip-info">
+                            <h3>Dayak Culture Experience</h3>
+                            <p>Mengenal budaya suku Dayak dengan mengunjungi rumah betang dan ritual tradisional.</p>
+                            <div class="price">Rp 2.900.000</div>
+                            <div class="location">📍 Kalimantan Barat</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="kalimantan" data-category="alam" data-price="3200000">
+                        <div class="trip-image">⛰</div>
+                        <div class="trip-info">
+                            <h3>Derawan Islands</h3>
+                            <p>Surga bawah laut dengan penyu hijau, ubur-ubur tanpa sengat, dan spot diving terbaik.</p>
+                            <div class="price">Rp 3.200.000</div>
+                            <div class="location">📍 Kalimantan Timur</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Sulawesi -->
+                    <div class="trip-card" data-region="sulawesi" data-category="budaya" data-price="3500000">
+                        <div class="trip-image">⚰</div>
+                        <div class="trip-info">
+                            <h3>Tana Toraja Heritage</h3>
+                            <p>Jelajahi budaya unik Toraja dengan rumah tongkonan dan upacara pemakaman tradisional.</p>
+                            <div class="price">Rp 3.500.000</div>
+                            <div class="location">📍 Sulawesi Selatan</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="sulawesi" data-category="pantai" data-price="4200000">
+                        <div class="trip-image">🐠</div>
+                        <div class="trip-info">
+                            <h3>Bunaken Marine Paradise</h3>
+                            <p>Diving dan snorkeling di taman laut Bunaken dengan keanekaragaman hayati laut yang menakjubkan.</p>
+                            <div class="price">Rp 4.200.000</div>
+                            <div class="location">📍 Sulawesi Utara</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="sulawesi" data-category="pantai" data-price="3900000">
+                        <div class="trip-image">🏖</div>
+                        <div class="trip-info">
+                            <h3>Wakatobi Dive Paradise</h3>
+                            <p>Menyelam di salah satu spot diving terbaik dunia dengan terumbu karang yang masih pristine.</p>
+                            <div class="price">Rp 3.900.000</div>
+                            <div class="location">📍 Sulawesi Tenggara</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <!-- Maluku & Papua -->
+                    <div class="trip-card" data-region="maluku-papua" data-category="pantai" data-price="5500000">
+                        <div class="trip-image">🏝</div>
+                        <div class="trip-info">
+                            <h3>Raja Ampat Marine Sanctuary</h3>
+                            <p>Surga bawah laut dengan biodiversitas tertinggi di dunia, perfect untuk diving dan snorkeling.</p>
+                            <div class="price">Rp 5.500.000</div>
+                            <div class="location">📍 Papua Barat</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="maluku-papua" data-category="pantai" data-price="4800000">
+                        <div class="trip-image">🏖</div>
+                        <div class="trip-info">
+                            <h3>Banda Neira Spice Islands</h3>
+                            <p>Jelajahi pulau rempah bersejarah dengan benteng VOC dan underwater yang menakjubkan.</p>
+                            <div class="price">Rp 4.800.000</div>
+                            <div class="location">📍 Maluku</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="maluku-papua" data-category="alam" data-price="6200000">
+                        <div class="trip-image">🦅</div>
+                        <div class="trip-info">
+                            <h3>Baliem Valley Culture Trek</h3>
+                            <p>Petualangan ke lembah Baliem untuk bertemu suku Dani dan menikmati pemandangan pegunungan Papua.</p>
+                            <div class="price">Rp 6.200.000</div>
+                            <div class="location">📍 Papua</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+
+                    <div class="trip-card" data-region="maluku-papua" data-category="pantai" data-price="5800000">
+                        <div class="trip-image">🌊</div>
+                        <div class="trip-info">
+                            <h3>Triton Bay Hidden Paradise</h3>
+                            <p>Destinasi diving tersembunyi dengan soft coral terbaik dan endemic species yang unik.</p>
+                            <div class="price">Rp 5.800.000</div>
+                            <div class="location">📍 Papua Barat</div>
+                            <button class="btn" onclick="location.href='checkout.html'">Lihat Detail</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="destinationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+                <div class="modal-image" id="modalImage"></div>
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-location" id="modalLocation"></p>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-highlights">
+                    <h4>Highlights</h4>
+                    <ul id="modalHighlights"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="footerLogo" height="60px" width="auto"></div>
+            </div>
+            <p>Copyright © 2025 IndoEssence by VisiAsia. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

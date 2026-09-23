@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | IndoEssence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-bar">
+            <div class="home-button">
+                <a href="homeNL.html" class="home-btn"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="Home" height="60px" width="auto"></a>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search destinations...">
+                <button class="search-btn" onclick="performSearch()">🔍</button>
+            </div>
+            <div class="nav-buttons">
+                <button class="login-btn" onclick="location.href='login.html'">Login</button>
+                <button class="register-btn" onclick="location.href='registerNew.html'">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <div class="login-card">
+            <h1 class="login-title">Welcome Back</h1>
+            <p class="login-subtitle">Continue your Indonesian journey</p>
+
+            <form id="loginForm">
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" id="email" placeholder="Enter your email" required>
+                    <div class="error-message" id="emailError">Please enter a valid email address</div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <div class="password-container">
+                        <input type="password" class="form-input" id="password" placeholder="Enter your password" required>
+                        <button type="button" class="password-toggle" onclick="togglePassword()">👁️</button>
+                    </div>
+                    <div class="error-message" id="passwordError">Password is required</div>
+                </div>
+
+                <div class="remember-forgot">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        Remember me
+                    </label>
+                    <a href="#" class="forgot-password" onclick="forgotPassword()">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="login-btn" id="loginBtn" onclick="location.href='homeL.html'">Sign In</button>
+            </form>
+
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+
+            <div class="social-buttons">
+                <button class="social-btn" onclick="socialLogin('google')">
+                    📧 Google
+                </button>
+                <button class="social-btn" onclick="socialLogin('facebook')">
+                    📘 Facebook
+                </button>
+            </div>
+
+            <div class="register-link">
+                Don't have an account? <a href="registerNew.html" onclick="goToRegister()">Create one here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Overlay -->
+    <div class="overlay" id="forgotPasswordOverlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeForgotPasswordOverlay()">&times;</button>
+            <div class="overlay-icon">📧</div>
+            <h2 class="overlay-title">Check Your Email</h2>
+            <p class="overlay-message">
+                We've sent a password reset link to your email address. Please check your inbox and follow the instructions to reset your password.
+            </p>
+            <div class="overlay-email" id="overlayEmail"></div>
+            <p class="overlay-message" style="font-size: 14px; color: #888; margin-bottom: 25px;">
+                Didn't receive the email? Check your spam folder or try again in a few minutes.
+            </p>
+            <button class="overlay-btn" onclick="closeForgotPasswordOverlay()">Got it</button>
+        </div>
+    </div>
+
+    <!-- Success Login Overlay -->
+    <div class="success-overlay" id="successOverlay">
+        <div class="success-content">
+            <div class="success-icon">🎉</div>
+            <h2 class="success-title">Login Successful!</h2>
+            <p class="success-message">
+                Welcome back to IndoEssence! You have successfully signed in to your account.
+            </p>
+            <div class="success-details" id="successDetails">
+                <strong>Signed in as:</strong> <span id="successEmail"></span><br>
+                <span id="rememberStatus"></span>
+            </div>
+            <p class="success-message" style="font-size: 14px; color: #888;">
+                Redirecting to home page<span class="loading-dots"></span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Form validation and login logic
+        const form = document.getElementById('loginForm');
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+
+        // Real-time validation
+        emailInput.addEventListener('blur', () => validateEmail());
+        passwordInput.addEventListener('blur', () => validatePassword());
+        emailInput.addEventListener('input', () => clearError('email'));
+        passwordInput.addEventListener('input', () => clearError('password'));
+
+        function validateEmail() {
+            const email = emailInput.value;
+            const errorElement = document.getElementById('emailError');
+            const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+            if (!isValid && email.length > 0) {
+                emailInput.classList.add('error');
+                errorElement.style.display = 'block';
+                return false;
+            } else {
+                emailInput.classList.remove('error');
+                errorElement.style.display = 'none';
+                return true;
+            }
+        }
+
+        function validatePassword() {
+            const password = passwordInput.value;
+            const errorElement = document.getElementById('passwordError');
+            const isValid = password.length > 0;
+
+            if (!isValid) {
+                passwordInput.classList.add('error');
+                errorElement.style.display = 'block';
+                return false;
+            } else {
+                passwordInput.classList.remove('error');
+                errorElement.style.display = 'none';
+                return true;
+            }
+        }
+
+        function clearError(fieldName) {
+            const input = document.getElementById(fieldName);
+            const errorElement = document.getElementById(fieldName + 'Error');
+            input.classList.remove('error');
+            errorElement.style.display = 'none';
+        }
+
+        // Toggle password visibility
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleBtn = document.querySelector('.password-toggle');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleBtn.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                toggleBtn.textContent = '👁️';
+            }
+        }
+
+        // Show success overlay
+        function showSuccessOverlay(email, rememberMe) {
+            document.getElementById('successEmail').textContent = email;
+            document.getElementById('rememberStatus').textContent = rememberMe ?
+                'You will stay logged in on this device.' :
+                'You will be logged out when you close the browser.';
+
+            document.getElementById('successOverlay').classList.add('show');
+            document.body.style.overflow = 'hidden';
+
+            // Auto redirect after 3 seconds
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 3000);
+        }
+
+        // Form submission
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const isEmailValid = validateEmail();
+            const isPasswordValid = validatePassword();
+
+            if (isEmailValid && isPasswordValid) {
+                // Simulate login process
+                const loginBtn = document.getElementById('loginBtn');
+                const originalText = loginBtn.textContent;
+                loginBtn.textContent = 'Signing In...';
+                loginBtn.disabled = true;
+
+                // Get form values
+                const email = emailInput.value;
+                const rememberMe = document.getElementById('rememberMe').checked;
+
+                setTimeout(() => {
+                    // Reset button
+                    loginBtn.textContent = originalText;
+                    loginBtn.disabled = false;
+
+                    // Show success overlay
+                    showSuccessOverlay(email, rememberMe);
+                }, 1500);
+            }
+        });
+
+        // Forgot password functionality
+        function forgotPassword() {
+            const email = emailInput.value;
+            if (email && validateEmail()) {
+                // Show the overlay with the email
+                document.getElementById('overlayEmail').textContent = email;
+                document.getElementById('forgotPasswordOverlay').classList.add('show');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling
+            } else {
+                alert('📧 Please enter your email address first to reset your password.');
+                emailInput.focus();
+            }
+        }
+
+        function closeForgotPasswordOverlay() {
+            document.getElementById('forgotPasswordOverlay').classList.remove('show');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close overlay when clicking outside
+        document.getElementById('forgotPasswordOverlay').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeForgotPasswordOverlay();
+            }
+        });
+
+        // Close overlay with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeForgotPasswordOverlay();
+            }
+        });
+
+        // Navigation functions
+        function goToHome() {
+            alert('🏠 Redirecting to home page...');
+            // In a real app: window.location.href = 'index.html';
+        }
+
+        function socialLogin(provider) {
+            alert(`📱 Logging in with ${provider}...\n\nThis would integrate with ${provider} OAuth in a real application.`);
+        }
+
+        function goBack() {
+            // Cek apakah ada referrer (halaman sebelumnya)
+            if (document.referrer && document.referrer !== window.location.href) {
+                window.history.back();
+            } else {
+                // Jika tidak ada referrer atau sama dengan current page, ke home
+                window.location.href = 'index.html';
+            }
+        }
+
+        window.addEventListener('load', function() {
+            emailInput.focus();
+        });
+    </script>
+
+        <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="footerLogo" height="60px" width="auto"></div>
+            </div>
+            <p>Copyright © 2025 IndoEssence by VisiAsia. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

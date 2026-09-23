@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | IndoEssence</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-bar">
+            <div class="home-button">
+                <a href="homeL.html" class="home-btn"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="Home" height="60px" width="auto"></a>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search destinations...">
+                <button class="search-btn" onclick="location.href='trip.html'">🔍</button>
+            </div>
+            <div class="nav-buttons">
+                <button class="register-btn" onclick="location.href='editprofile.html'">Edit Profile</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1 class="profile-title">Edit Profile</h1>
+            <p class="profile-subtitle">Update your personal information and preferences</p>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-sidebar">
+                <div class="avatar-section">
+                    <div class="avatar-container">
+                        <div class="avatar" id="avatarDisplay">
+                            👤
+                        </div>
+                        <button class="avatar-upload" onclick="uploadAvatar()">📷</button>
+                        <input type="file" id="avatarInput" accept="image/*" class="hidden">
+                    </div>
+                    <div class="user-name" id="displayName">User Profile</div>
+                </div>
+            </div>
+
+            <div class="profile-form">
+                <form id="profileForm">
+                    <div class="form-section">
+                        <h3 class="section-title">Personal Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-input" id="firstName" value="" placeholder="Enter your first name" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-input" id="lastName" value="" placeholder="Enter your last name" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-input" id="email" value="" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-input" id="phone" value="" placeholder="Enter your phone number">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Date of Birth</label>
+                                <input type="date" class="form-input" id="birthDate" value="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Gender</label>
+                                <select class="form-select" id="gender">
+                                    <option value="" disabled selected>Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="prefer-not-to-say">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-title">Location & Travel Preferences</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Country</label>
+                                <select class="form-select" id="country">
+                                    <option value="" disabled selected>Select Country</option>
+                                    <option value="indonesia">Indonesia</option>
+                                    <option value="singapore">Singapore</option>
+                                    <option value="malaysia">Malaysia</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">City</label>
+                                <input type="text" class="form-input" id="city" value="" placeholder="Enter your city">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Travel Interests</label>
+                            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="interest1">
+                                    <label for="interest1">Beach & Island</label>
+                                </div>
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="interest2">
+                                    <label for="interest2">Mountain & Hiking</label>
+                                </div>
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="interest3">
+                                    <label for="interest3">Cultural Sites</label>
+                                </div>
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="interest4">
+                                    <label for="interest4">Adventure Sports</label>
+                                </div>
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="interest5">
+                                    <label for="interest5">Food & Culinary</label>
+                                </div>
+                                <div class="form-checkbox">
+                                    <input type="checkbox" id="interest6">
+                                    <label for="interest6">Wildlife & Nature</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-title">About Me</h3>
+                        <div class="form-group">
+                            <label class="form-label">Bio</label>
+                            <textarea class="form-textarea" id="bio" placeholder="Tell us about yourself and your travel experiences..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3 class="section-title">Notification Preferences</h3>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="emailNotif">
+                            <label for="emailNotif">Email notifications for new destinations and deals</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="smsNotif">
+                            <label for="smsNotif">SMS notifications for urgent updates</label>
+                        </div>
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="pushNotif">
+                            <label for="pushNotif">Push notifications on mobile app</label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-danger" onclick="deleteAccount()">Delete Account</button>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="footerLogo" height="60px" width="auto"></div>
+            </div>
+            <p>Copyright © 2025 IndoEssence by VisiAsia. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">✅</div>
+            <h2 class="modal-title">Profile Updated Successfully!</h2>
+            <p class="modal-message">Your changes have been saved and your profile has been updated.</p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="saveAndGoHome()">Great!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Account Modal -->
+    <div id="deleteModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">⚠️</div>
+            <h2 class="modal-title">Delete Account</h2>
+            <p class="modal-message">This action cannot be undone! All your data will be permanently removed.</p>
+            <p class="modal-message"><strong>Type "DELETE" to confirm:</strong></p>
+            <input type="text" id="deleteConfirmInput" class="modal-input" placeholder="Type DELETE here">
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeModal('deleteModal')">Cancel</button>
+                <button class="btn btn-danger" onclick="confirmDelete()">Delete Account</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Delete Success Modal -->
+    <div id="deleteSuccessModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-icon">❌</div>
+            <h2 class="modal-title">Account Deleted</h2>
+            <p class="modal-message">Your account has been permanently deleted. You will receive a confirmation email shortly.</p>
+            <div class="modal-actions">
+                <button class="btn btn-primary" onclick="location.href='homeNL.html'">Go to Home</button>
+            </div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

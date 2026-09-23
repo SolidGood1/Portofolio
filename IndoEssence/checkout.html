@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | IndoEssence</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-bar">
+            <div class="home-button">
+                <a href="homeL.html" class="home-btn"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="Home" height="60px" width="auto"></a>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search destinations...">
+                <button class="search-btn" onclick="location.href='trip.html'">🔍</button>
+            </div>
+            <div class="nav-buttons">
+                <button class="register-btn" onclick="location.href='editprofile.html'">Edit Profile</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+            <div class="checkout-form">
+                <div class="form-section">
+                    <h2 class="section-title">
+                        👤 Booking Information
+                    </h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="section-title">
+                        🎫 Traveler Details
+                    </h2>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="adults">Adults</label>
+                            <select id="adults" name="adults">
+                                <option value="2">2 People</option>
+                                <option value="1">1 Person</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="children">Children</label>
+                            <select id="children" name="children">
+                                <option value="0">0 Children</option>
+                                <option value="1">1 Child</option>
+                                <option value="2">2 Children</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="specialRequest">Special Requests</label>
+                        <textarea id="specialRequest" name="specialRequest" rows="3" placeholder="Dietary requirements, accessibility needs, etc."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h2 class="section-title">
+                        💳 Payment Method
+                    </h2>
+                    <div class="payment-methods">
+                        <div class="payment-option selected" data-method="paypal">
+                            <div class="payment-icon">💙</div>
+                            <div>IPay</div>
+                        </div>
+                        <div class="payment-option" data-method="credit">
+                            <div class="payment-icon">💳</div>
+                            <div>Credit Card</div>
+                        </div>
+                        <div class="payment-option" data-method="applepay">
+                            <div class="payment-icon">📱</div>
+                            <div>E-Wallet</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms" style="margin: 0; font-weight: normal;">
+                            I agree to the <a href="#" style="color: #4a90e2;">Terms & Conditions</a> and <a href="#" style="color: #4a90e2;">Privacy Policy</a>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3 style="color: #2c5aa0; margin-bottom: 20px; font-size: 20px;">📋 Order Summary</h3>
+
+                <!-- Package Selector -->
+                <div style="margin-bottom: 20px;">
+                    <label style="font-weight: 600; margin-bottom: 10px; display: block; color: #333;">Select Tour Package:</label>
+                    <select id="packageSelector" onchange="changePackage(parseInt(this.value))" style="width: 100%; padding: 10px; border: 2px solid #e1e5e9; border-radius: 8px; font-size: 14px;">
+                        <option value="1">Premium Package - $450/person</option>
+                        <option value="2">Standard Package - $320/person</option>
+                        <option value="3">Basic Package - $180/person</option>
+                    </select>
+                </div>
+
+                <div class="trip-card">
+                    <div class="trip-image">🏛️</div>
+                    <div class="trip-title">Premium Package</div>
+                    <div class="trip-details">
+                        📅 June 25 - 26, 2025<br> 🏨 Heritage Hotel Yogyakarta<br> 🚗 Private Transport<br> 🎫 Temple Entrance<br> 🍽️ Traditional Lunch
+                    </div>
+                </div>
+
+                <div class="price-breakdown">
+                    <div class="price-row">
+                        <span>Paket Wisata (2 Dewasa)</span>
+                        <span>Rp 4.500.000</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Asuransi Perjalanan</span>
+                        <span>Rp 150.000</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Biaya Admin</span>
+                        <span>Rp 25.000</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Diskon Early Bird</span>
+                        <span style="color: #e74c3c;">-Rp 200.000</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Total Price</span>
+                        <span>Rp 4.475.000</span>
+                    </div>
+                </div>
+
+                <button class="checkout-btn" onclick="processCheckout()">
+                    🔒 Pay Now
+                </button>
+
+                <div class="security-info">
+                    <div>🔐</div>
+                    <div>
+                        Your payment is secure and encrypted. Personal data is protected according to international security standards.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="footerLogo" height="60px" width="auto"></div>
+            </div>
+            <p>Copyright © 2025 IndoEssence by VisiAsia. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+
+</html>

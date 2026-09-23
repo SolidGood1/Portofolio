@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | IndoEssence</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-bar">
+            <div class="home-button">
+                <a href="homeNL.html" class="home-btn"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="Home" height="40px" width="auto"></a>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search destinations...">
+                <button class="search-btn" onclick="performSearch()">🔍</button>
+            </div>
+            <div class="nav-buttons">
+                <button class="login-btn" onclick="location.href='register.html'">Login</button>
+                <button class="register-btn" onclick="location.href='register.html'">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Sign In Section -->
+        <div class="form-section sign-in-section" id="register-section">
+            <h2 class="form-title">Sign In</h2>
+            <form id="signInForm">
+                <div class="form-group">
+                    <input type="email" class="form-input" id="signInEmail" placeholder="Insert email" required>
+                    <div class="error-message" id="emailError">Please enter a valid email address</div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-input" id="signInUsername" placeholder="Create username" required>
+                    <div class="error-message" id="usernameError">Username must be at least 3 characters long</div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="form-input" id="signInPassword" placeholder="Create password" required>
+                    <div class="password-strength" id="passwordStrengthText"></div>
+                    <div class="error-message" id="passwordError">Password must be at least 6 characters long</div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="form-input" id="confirmPassword" placeholder="Confirm password" required>
+                    <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="tel" class="form-input" id="phoneNumber" placeholder="Insert phone number" required>
+                    <div class="error-message" id="phoneError">Please enter a valid phone number</div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="date" class="form-input" id="birthdate" placeholder="Birthdate" required>
+                    </div>
+                    <div class="form-group">
+                        <select class="select-input" id="gender" required>
+                            <option value="" disabled selected>Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="select-input" id="country" required>
+                            <option value="" disabled selected>Country</option>
+                            <option value="indonesia">Indonesia</option>
+                            <option value="malaysia">Malaysia</option>
+                            <option value="singapore">Singapore</option>
+                            <option value="thailand">Thailand</option>
+                            <option value="philippines">Philippines</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" class="checkbox" required>
+                    <label for="terms" class="checkbox-label">
+                        I have agreed the <a href="#" class="terms-link">Terms of Service</a>
+                    </label>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="signInBtn" disabled>Sign In</button>
+            </form>
+        </div>
+
+        <!-- Log In Section -->
+        <div class="form-section log-in-section" id="login-section">
+            <h2 class="form-title">Log In</h2>
+            <form id="logInForm">
+                <div class="form-group">
+                    <input type="text" class="form-input" id="loginId" placeholder="Insert email or phone number" required>
+                    <div class="error-message" id="loginIdError">Please enter a valid email or phone number</div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" class="form-input" id="loginPassword" placeholder="Insert Password" required>
+                    <div class="error-message" id="loginPasswordError">Password is required</div>
+                </div>
+                
+                <div class="trust-device">
+                    <input type="checkbox" id="trustDevice" class="checkbox">
+                    <label for="trustDevice">I trust this device</label>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="logInBtn" disabled>Log In</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="footerLogo" height="60px" width="auto"></div>
+            </div>
+            <p>Copyright © 2025 IndoEssence by VisiAsia. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>

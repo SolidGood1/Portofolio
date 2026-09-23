@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | IndoEssence</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav-bar">
+            <div class="home-button">
+                <a href="homeNL.html" class="home-btn"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="Home" height="60px" width="auto"></a>
+            </div>
+            <div class="search-container">
+                <input type="text" class="search-bar" placeholder="Search destinations...">
+                <button class="search-btn" onclick="performSearch()">🔍</button>
+            </div>
+            <div class="nav-buttons">
+                <button class="login-btn" onclick="location.href='login.html'">Login</button>
+                <button class="register-btn" onclick="location.href='registerNew.html'">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <h1 class="hero-title">Welcome.</h1>
+        <p class="hero-subtitle">How may IndoEssence help?</p>
+        <div class="action-buttons">
+            <button class="action-btn" onclick="location.href='registerNew.html'">📊 TRIP</button>
+            <button class="action-btn" onclick="location.href='registerNew.html'">💡 TIPS</button>
+        </div>
+    </section>
+
+    <section class="recommendations">
+        <h2>Top Recommendations</h2>
+        <div class="destinations-grid">
+            <div class="destination-card" onclick="showDestination('Borobudur Temple')">
+                <div class="destination-image" style="background-image: url('https://unsplash.com/photos/gold-buddha-statue-on-top-of-white-and-brown-concrete-building-during-daytime-KTHA8H_qpOw?w=400&h=250&fit=crop')"></div>
+                <div class="destination-info">
+                    <h3 class="destination-name">Borobudur Temple</h3>
+                    <p class="destination-location">Central Java, Indonesia</p>
+                </div>
+            </div>
+
+            <div class="destination-card" onclick="showDestination('Raja Ampat')">
+                <div class="destination-image" style="background-image: url('https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=250&fit=crop')"></div>
+                <div class="destination-info">
+                    <h3 class="destination-name">Raja Ampat</h3>
+                    <p class="destination-location">Southwest Papua, Indonesia</p>
+                </div>
+            </div>
+
+            <div class="destination-card" onclick="showDestination('Komodo Island')">
+                <div class="destination-image" style="background-image: url('https://media.bareksa.com/cms/media/assets/image/2019/11/15291_d12c5ca419130d95bb06c1d571f7d700.jpg')"></div>
+                <div class="destination-info">
+                    <h3 class="destination-name">Komodo Island</h3>
+                    <p class="destination-location">East Nusa Tenggara, Indonesia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="promotion-section">
+        <div class="promotion-content">
+            <div class="promo-card">
+                <h3>🎉 Special Holiday Package</h3>
+                <p>Get up to 40% off on selected destinations during the holiday season!</p>
+                <button class="promo-btn" onclick="showPromoDetails('holiday')">Learn More</button>
+            </div>
+
+            <div class="promo-card">
+                <h3>🌊 Island Hopping Deal</h3>
+                <p>Explore multiple Indonesian islands with our exclusive combo packages!</p>
+                <button class="promo-btn" onclick="showPromoDetails('island')">Discover</button>
+            </div>
+
+            <div class="promo-card">
+                <h3>🏛️ Cultural Heritage Tour</h3>
+                <p>Immerse yourself in Indonesia's rich cultural heritage with expert guides!</p>
+                <button class="promo-btn" onclick="showPromoDetails('culture')">Explore</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="destinationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+                <div class="modal-image" id="modalImage"></div>
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-location" id="modalLocation"></p>
+                <p class="modal-description" id="modalDescription"></p>
+                <div class="modal-highlights">
+                    <h4>Highlights</h4>
+                    <ul id="modalHighlights"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo"><img src="logoTugas VisiAsia/IndoEssencelongCrop.png" alt="footerLogo" height="60px" width="auto"></div>
+            </div>
+            <p>Copyright © 2025 IndoEssence by VisiAsia. All Rights Reserved.</p>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+
+</html>
