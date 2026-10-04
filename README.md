@@ -68,7 +68,7 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
   * Merancang komponen antarmuka e-commerce (seperti halaman katalog produk & checkout flow)
   * Membantu penyusunan alur prototype interaktif sesuai pengarahan tim
   * Merancang logo produk dari nol berbasis filosofi produk
-* **Link Prototype:** [Figma](https://www.figma.com/proto/Xl7IRZlurq85puzNSDuI3f/Aillerce?node-id=1-2&p=f&t=Mq75Q3ql6peoulyi-1)
+* **Link Prototype:** [Figma](https://www.figma.com/proto/XI7IRZIurq85puzNSDuI3f/Aillerce?node-id=1-2&starting-point-node-id=1%3A2&t=chqigwZx73Gfr1md-1)
 
 ![Preview](assets/aillerce.png)
 
