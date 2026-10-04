@@ -1,7 +1,7 @@
 # Portofolio
 Halo, saya Micicho Arinda
 
-* Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sistem terstruktur, dan analisis risiko. Berpengalaman memimpin perancangan UI/UX, penyusunan dokumentasi produk, serta koordinasi tim teknis.
+Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sistem terstruktur, dan analisis risiko. Berpengalaman memimpin perancangan UI/UX, penyusunan dokumentasi produk, serta koordinasi tim teknis.
 
 ## Tech Stack & Tools
 * **Product & Project Management:** Notion, Trello, SDLC (Agile/Scrum), User Story / Epics
@@ -63,4 +63,4 @@ Halo, saya Micicho Arinda
 
 ## Kontak
 * **LinkedIn:** [Micicho](https://www.linkedin.com/in/micichoarinda)
-* **Email:** [Gmail](micicho.arinda@gmail.com) / [BINUS](micicho.arinda@binus.ac.id)
+* **Email:** micicho.arinda@gmail.com / micicho.arinda@binus.ac.id
