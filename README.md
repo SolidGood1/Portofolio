@@ -6,7 +6,7 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
 ## Tech Stack & Tools
 * **Product & Project Management:** Notion, Trello, SDLC (Agile/Scrum), User Story / Epics
 * **UI/UX & Prototyping:** Figma, Wireframing, User Flow, Usability Testing
-* **Development & Infrastructure:** HTML/CSS, JavaScript, Node.js, Git/GitHub, Docker (DevOps Basic), API Integration
+* **Development & Infrastructure:** HTML/CSS, JavaScript, Git/GitHub, Docker (DevOps Basic), API Integration
 
 
 ## Proyek Individu
