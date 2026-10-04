@@ -8,7 +8,6 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
 * **UI/UX & Prototyping:** Figma, Wireframing, User Flow, Usability Testing
 * **Development & Infrastructure:** HTML/CSS, JavaScript, Git/GitHub, Docker (DevOps Basic), API Integration
 
-
 ## Proyek Individu
 
 ### 1. V-Phone Website
@@ -19,6 +18,8 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
   * Melakukan analisis kebutuhan pengguna dan merancang alur user journey
   * Membuat wireframe, high-fidelity design, serta prototype interaktif
 * **Link Prototype:** [Figma](https://www.figma.com/proto/IfY7bOE6nIu8ksF9FH2O3d/V-Phone?node-id=1-3&p=f&t=9v1LeaHVIKG87QLb-1)
+
+![Preview](assets/vphone.png)
 
 ## Proyek Kelompok
 
@@ -33,6 +34,8 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
   * Merancang logo produk dari nol berbasis filosofi produk
 * **Link Prototype:** [Figma](https://www.figma.com/proto/J1ELw1kaMUq9zbpp6XC3Q7?node-id=0-1&t=RT33y7NwDX8OP1JU-6)
 
+![Preview](assets/indoessence.png)
+
 ### 2. MentorLink Website
 * **Peran:** Lead UI/UX Designer, Frontend Contributor, & Backend Contributor
 * **Tools:** Figma, HTML/CSS/JavaScript, Notion
@@ -42,6 +45,8 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
   * Mengambil alih mentoring progress dan eksekusi teknis menjelang tenggat waktu untuk memastikan fitur-fitur krusial dapat difungsikan
   * Mengembangkan komponen frontend dan membantu integrasi logika backend
 * **Link Prototype:** [Figma](https://www.figma.com/proto/sTTxckH1XSyn83bFPhkd6A?node-id=0-1&t=kAjtjzpd8Yw62eVu-6)
+
+![Preview](assets/mentorlink.png)
 
 ### 3. VisiAnak
 * **Peran:** Lead UI/UX Designer & Research Contributor
@@ -53,6 +58,8 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
   * Merancang logo produk dari nol berbasis filosofi produk
 * **Link Prototype:** [Figma](https://www.figma.com/proto/Xl7IRZlurq85puzNSDuI3f/Aillerce?node-id=1-2&p=f&t=Mq75Q3ql6peoulyi-1)
 
+![Preview](assets/visianak.png)
+
 ### 4. Aillerce Website
 * **Peran:** UI/UX Contributor
 * **Tools:** Figma
@@ -63,6 +70,7 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
   * Merancang logo produk dari nol berbasis filosofi produk
 * **Link Prototype:** [Figma](https://www.figma.com/proto/Xl7IRZlurq85puzNSDuI3f/Aillerce?node-id=1-2&p=f&t=Mq75Q3ql6peoulyi-1)
 
+![Preview](assets/aillerce.png)
 
 ## Kontak
 * **LinkedIn:** [Micicho](https://www.linkedin.com/in/micichoarinda)
