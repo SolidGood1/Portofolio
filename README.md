@@ -56,7 +56,7 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
   * Memimpin penyusunan konsep antarmuka yang ramah pengguna (user-friendly)
   * Berkontribusi dalam riset pasar, identifikasi user pain points, dan konseptualisasi fitur inovatif
   * Merancang logo produk dari nol berbasis filosofi produk
-* **Link Prototype:** [Figma](https://www.figma.com/proto/Xl7IRZlurq85puzNSDuI3f/Aillerce?node-id=1-2&p=f&t=Mq75Q3ql6peoulyi-1)
+* **Link Prototype:** [Figma]([https://www.figma.com/proto/Xl7IRZlurq85puzNSDuI3f/Aillerce?node-id=1-2&p=f&t=Mq75Q3ql6peoulyi-1](https://www.figma.com/proto/bDG76ou1Yq0cHYYShgaWQa/VisiAnak?node-id=1-2&p=f&t=etdH6Nt3yExQefA3-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2))
 
 ![Preview](assets/visianak.png)
 
