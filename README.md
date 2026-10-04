@@ -30,6 +30,7 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
   * Memimpin pembuatan sistem desain visual dan high-fidelity prototype
   * Berpartisipasi dalam riset pengguna untuk menguji usability antarmuka
   * Membangun antarmuka frontend agar responsif dan sesuai dengan wireframe
+  * Merancang logo produk dari nol berbasis filosofi produk
 * **Link Prototype:** [Figma](https://www.figma.com/proto/J1ELw1kaMUq9zbpp6XC3Q7?node-id=0-1&t=RT33y7NwDX8OP1JU-6)
 
 ### 2. MentorLink Website
@@ -49,6 +50,7 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
 * **Tanggung Jawab Utama Saya:**
   * Memimpin penyusunan konsep antarmuka yang ramah pengguna (user-friendly)
   * Berkontribusi dalam riset pasar, identifikasi user pain points, dan konseptualisasi fitur inovatif
+  * Merancang logo produk dari nol berbasis filosofi produk
 * **Link Prototype:** [Figma](https://www.figma.com/proto/Xl7IRZlurq85puzNSDuI3f/Aillerce?node-id=1-2&p=f&t=Mq75Q3ql6peoulyi-1)
 
 ### 4. Aillerce Website
@@ -58,6 +60,7 @@ Saya berfokus pada pengembangan produk digital berbasis riset pengguna, alur sis
 * **Tanggung Jawab Utama Saya:**
   * Merancang komponen antarmuka e-commerce (seperti halaman katalog produk & checkout flow)
   * Membantu penyusunan alur prototype interaktif sesuai pengarahan tim
+  * Merancang logo produk dari nol berbasis filosofi produk
 * **Link Prototype:** [Figma](https://www.figma.com/proto/Xl7IRZlurq85puzNSDuI3f/Aillerce?node-id=1-2&p=f&t=Mq75Q3ql6peoulyi-1)
 
 
